@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/styles/App.scss"; // Referencia a los estilos
 
 const HelloWorld = () => (
     <section>
