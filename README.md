@@ -2,7 +2,7 @@
 
 1. Error al trata de usar Webpack-dev-server.
 
--   El error lo solucioné cuando borré la caché de node y al actualizarlo a la última versión.
+- El error lo solucioné cuando borré la caché de node y al actualizarlo a la última versión.
 
 > Soluciones:
 
