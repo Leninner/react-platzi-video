@@ -6,4 +6,5 @@ const HelloWorld = () => {
   return <div>Hola Mundo, esto funciona excelente</div>;
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export { HelloWorld };
