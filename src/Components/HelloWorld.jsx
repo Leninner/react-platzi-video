@@ -3,8 +3,7 @@ import '../assets/styles/App.scss';
 
 //Componente stateless, siempre importar react
 const HelloWorld = () => {
-  return <div>Hola Mundo, esto funciona excelente</div>;
+  return <div>Hola Mundo, esto funciona excelente, me gusta full</div>;
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export { HelloWorld };
