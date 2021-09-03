@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer';
 import '../assets/styles/App.scss';
 
 const App = () => {
+  // const [videos, setVideos] = useState({ mylist: [], trends: [], originals: [] });
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -16,36 +17,31 @@ const App = () => {
       .then((data) => setVideos(data));
   }, []);
 
-  console.log(videos);
-
   return (
     <div className='App'>
       <Header />
       <Search />
-      <Categorias title='Mi Lista'>
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categorias>
+      {videos.mylist?.length > 0 && (
+        <Categorias title='My list'>
+          <Carousel>
+            <CarouselItem />
+          </Carousel>
+        </Categorias>
+      )}
 
-      <Categorias title='Más Reproducidos'>
+      <Categorias title='Tendencias'>
         <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
+          {videos.trends?.map((item) => (
+            <CarouselItem key={item.id} {...item} />
+          ))}
         </Carousel>
       </Categorias>
 
       <Categorias title='Últimos Éxitos'>
         <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
+          {videos.originals?.map((item) => (
+            <CarouselItem key={item.id} {...item} />
+          ))}
         </Carousel>
       </Categorias>
       <Footer />
