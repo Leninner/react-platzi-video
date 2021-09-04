@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Leninner/react-platzi-video/issues"
   },
-  "homepage": "https://github.com/Leninner/react-platzi-video",
+  "homepage": "https://leninner.github.io/react-platzi-video",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
